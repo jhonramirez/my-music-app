@@ -1,0 +1,16 @@
+.btn {
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 8px;
+}
+
+.btn__gray {
+  background: #6c757d;
+  color: #dad4ce;
+}
+
+.btn:hover {
+  background: #5c636a;
+  border-color: #565e64;
+  color: #ffffff;
+}

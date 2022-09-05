@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  color: #dad4ce;
+  text-decoration: none;
+  align-items: flex-start;
+}
+
+.navbar:hover {
+  color: #ffffff;
+}
+
+.img__home {
+  width: 25px;
+  height: 25px;
+}
+
+.img__login{
+  width: 300px;
+  height: 300px;
+}
