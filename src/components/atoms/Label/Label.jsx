@@ -1,5 +1,7 @@
-import "./Label.scss";
-
-export const Label = ({ name, className }) => {
-  return <label className={className}>{name}</label>;
+export const Label = ({ name, className, htmlFor }) => {
+  return (
+    <label htmlFor={htmlFor} className={className}>
+      {name}
+    </label>
+  );
 };

@@ -1,10 +1,11 @@
-import { AuthProvider } from "./auth";
-import { AppRouter } from './router/AppRouter';
+import { Provider } from "react-redux";
+import { AppRouter } from "./router";
+import { store } from "./store";
 
 export const MymusicApp = () => {
   return (
-    <AuthProvider>
+    <Provider store={store}>
       <AppRouter />
-    </AuthProvider>
+    </Provider>
   );
 };

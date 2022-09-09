@@ -1,22 +1,22 @@
-import { Routes, Route } from 'react-router-dom';
-import { LoginPage } from '../auth';
-import { MusicRoutes } from '../music';
-import { PrivateRoute } from './PrivateRoute';
-import { PublicRoute } from './PublicRoute';
+import { Routes, Route, Navigate } from "react-router-dom";
+import { LoginPage } from "../components";
+import { useCheckAuth } from "../hooks";
+import { MusicRoutes } from "./";
 
 export const AppRouter = () => {
-    return (
-        <>
-            <Routes>
-                <Route path="login" element={
-                    <PublicRoute>
-                        <LoginPage />
-                    </PublicRoute>} />
-                <Route path="/*" element={
-                    <PrivateRoute>
-                        <MusicRoutes />
-                    </PrivateRoute>} />
-            </Routes>
-        </>
-    )
-}
+  useCheckAuth();
+  const authenticated = sessionStorage.getItem("token");
+
+  return (
+    <>
+      <Routes>
+        {authenticated ? (
+          <Route path="/*" element={<MusicRoutes />} />
+        ) : (
+          <Route path="login" element={<LoginPage />} />
+        )}
+        <Route path="/*" element={<Navigate to="/login" />} />
+      </Routes>
+    </>
+  );
+};
