@@ -3,7 +3,7 @@ export const createDB = async () => {
   const request = indexedDB.open(dbName, 3);
 
   if (!window.indexedDB) {
-    alert(`Su navegador no es compatible con IndexedDB`);
+    alert("Su navegador no es compatible con IndexedDB");
     return;
   }
 
@@ -81,7 +81,6 @@ export function deleteSong(db, id) {
     const cursor = event.target.result;
     if (cursor.key === id) {
       store.delete(cursor.primaryKey);
-      // alert("Se elimino de favorito");
     } else {
       cursor.continue();
     }

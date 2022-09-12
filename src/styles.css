@@ -1,5 +1,8 @@
 body {
+    margin: 0;
+    padding: 0;
     background: #EFD8BB;
     background: -webkit-linear-gradient(to right, #918fa3, #747458);
     background: linear-gradient(to right, #e9551a, #747458);
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }

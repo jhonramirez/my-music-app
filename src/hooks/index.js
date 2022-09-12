@@ -1,3 +1,3 @@
 export * from "./useCheckAuth";
 export * from "./useInfoUser";
-export * from "./useFavortiteSong";
+export * from "./useFavoriteSong";

@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useFavortiteSong } from "../../../hooks";
+import { useFavoriteSong } from "../../../hooks";
 import { getAllSongsFavoriteIndicator } from "../../../utils";
 import { Alert } from "../../atoms/Alert/Alert";
 import { SongList } from "../../molecules/SongList/SongList";
 import "./HomePage.scss";
+
 export const HomePage = () => {
   const { playlist } = useSelector((state) => state.playlist);
-  const favoriteSongs = useFavortiteSong();
+  const favoriteSongs = useFavoriteSong();
   const [songs, setSongs] = useState([]);
   const [message, setMessage] = useState("");
-  
+
   useEffect(() => {
-    if (favoriteSongs.length > 0 && playlist.length > 0) {
+    if (favoriteSongs?.length > 0 && playlist.length > 0) {
       const result = getAllSongsFavoriteIndicator(favoriteSongs, playlist);
       setSongs(result);
     }

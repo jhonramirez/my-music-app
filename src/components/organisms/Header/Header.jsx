@@ -19,21 +19,19 @@ export const Header = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-secondary p-2">
-      <div className="container-fluid">
+    <div className="header">
         <Navlink
           navigate="/"
           img="Mymusicapp.png"
           alt="My music App"
-          className="img__home"
+          className="header__imghome"
         />
-        <Navlink navigate="/favorites" name="Favorites" className="navbar" />
+        <Navlink navigate="/favorites" name="Favoritos" className="header__favorite" />
 
         <form onSubmit={onLogout}>
-          <Label name={user?.display_name} className="label" />
-          <Button onClick={() => onLogout()} icon= {icoLogout} />
+          <Label name={user?.display_name} className="header__name" />
+          <Button onClick={() => onLogout()} icon= {icoLogout} className="header__logout" />
         </form>
-      </div>
-    </nav>
+    </div>
   );
 };

@@ -1,29 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 18px;
+  background-color: rgb(17, 17, 16);
+  text-decoration: none;
+  position: fixed;
+  width: 99%;
+  z-index: 1; 
+  &__favorite {
+    color: #dad4ce;
+    text-decoration: none;
+  }
+  &__name {
+    color: #ffff;
+    padding: 10px;
+  }
+  &__imghome {
+    width: 25px;
+    height: 25px;
+  }
+  &__logout{
+    padding-right: 10px;
+  }
+}
 
-.header_icon {
-    height: 333px;
-    width: 333px;
-    fill: white;
-    stroke: none;
-  }
-
-  input[type="submit"] {
-    display: none;
-  }
-  
-  input[type="submit"] + label {
-      width: 6em;
-      text-align: center;
-      cursor: pointer;
-  }
-  
-  input[type="submit"]:checked + label svg {
-      transition: all 300ms ease-in-out;
-      fill: rgb(240, 136, 39);
-      transform: scale(1.3);
-      -webkit-transform: scale(1.3);
-  }
-  
-  label svg {
-      width: 35px;
-      fill: rgb(167, 167, 167);
-  }
+.header__favorite:hover {
+  color: rgb(240, 136, 39);
+}

@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import "./Navlink.scss";
 
 export const Navlink = ({ navigate, name, img, alt, className }) => {
   return (

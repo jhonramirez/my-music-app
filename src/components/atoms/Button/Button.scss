@@ -2,15 +2,15 @@
   border-radius: 10px;
   font-size: 1rem;
   padding: 8px;
-}
-
-.btn__gray {
-  background: #6c757d;
-  color: #dad4ce;
+  border: none;
+  &__black {
+    background: rgb(17, 17, 16);
+    color: #dad4ce;
+  }
 }
 
 .btn:hover {
-  background: #5c636a;
+  background: rgb(17, 17, 16);
   border-color: #565e64;
   color: #ffffff;
 }

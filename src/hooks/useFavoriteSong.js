@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { createDB, getAllSong } from "../services";
 
-export const useFavortiteSong = () => {
+export const useFavoriteSong = () => {
   const [favoriteSongs, setFavoriteSongs] = useState([]);
   useEffect(() => {
     const getData = async () => {

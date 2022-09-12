@@ -12,5 +12,4 @@ export const playlistSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
 export const { setPlaylist } = playlistSlice.actions;
