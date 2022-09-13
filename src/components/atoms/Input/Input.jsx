@@ -5,6 +5,7 @@ export const Input = ({ type, id, defaultChecked, onClick }) => {
       id={id}
       defaultChecked={defaultChecked}
       onClick={onClick}
+      data-testid='heart-input'
     />
   );
 };

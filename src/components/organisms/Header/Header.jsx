@@ -30,7 +30,7 @@ export const Header = () => {
 
         <form onSubmit={onLogout}>
           <Label name={user?.display_name} className="header__name" />
-          <Button onClick={() => onLogout()} icon= {icoLogout} className="header__logout" />
+          <Button onClick={() => onLogout()} label= {icoLogout} className="header__logout" />
         </form>
     </div>
   );
