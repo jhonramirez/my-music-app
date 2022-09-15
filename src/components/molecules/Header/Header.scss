@@ -8,6 +8,16 @@
   position: fixed;
   width: 99%;
   z-index: 1; 
+  &__left{
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  &__right{
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
   &__favorite {
     color: #dad4ce;
     text-decoration: none;
@@ -23,8 +33,7 @@
   &__logout{
     padding-right: 10px;
   }
-}
-
-.header__favorite:hover {
-  color: rgb(240, 136, 39);
+  &__favorite:hover {
+    color: rgb(240, 136, 39);
+  }
 }

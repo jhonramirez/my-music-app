@@ -3,14 +3,14 @@
   font-size: 1rem;
   padding: 8px;
   border: none;
+  cursor: pointer;
   &__black {
     background: rgb(17, 17, 16);
     color: #dad4ce;
   }
-}
-
-.btn:hover {
-  background: rgb(17, 17, 16);
-  border-color: #565e64;
-  color: #ffffff;
+  &:hover {
+    background: rgb(31, 31, 29);
+    border-color: #565e64;
+    color: #ffffff;
+  }
 }
