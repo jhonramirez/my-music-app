@@ -1,0 +1,18 @@
+.bodyTemplate {
+  padding: 20px 150px;
+  &__title {
+    text-align: center;
+    margin: 20px 0px;
+    margin-bottom: 0px;
+    padding: 20px;
+  }
+  &__footer {
+    padding: 18px;
+  }
+}
+
+@media only screen and (max-device-width: 750px) {
+  .bodyTemplate {
+    padding: 10px;
+  }
+}
