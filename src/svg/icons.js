@@ -1,4 +1,4 @@
-export const backwardsSvg = (
+export const previousSong = (
   <svg role="img" height="16" width="16" viewBox="0 0 16 16" className="">
     <path
       d="M13 2.5L5 7.119V3H3v10h2V8.881l8 4.619z"
@@ -6,18 +6,40 @@ export const backwardsSvg = (
     ></path>
   </svg>
 );
-export const forwardsSvg = (
+export const nextSong = (
   <svg role="img" height="16" width="16" viewBox="0 0 16 16" className="">
     <path d="M11 3v4.119L3 2.5v11l8-4.619V13h2V3z" fill="currentColor"></path>
   </svg>
 );
 
-export const shuffleSvg = (
-  <svg role="img" height="16" width="16" viewBox="0 0 16 16" className="">
+export const playSong = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    fill="currentColor"
+    className="bi bi-play"
+    viewBox="0 0 16 16"
+  >
+    {" "}
+    <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" />{" "}
+  </svg>
+);
+
+export const pauseSong = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    fill="currentColor"
+    className="bi bi-pause"
+    viewBox="0 0 16 16"
+  >
+    {" "}
     <path
-      d="M4.5 6.8l.7-.8C4.1 4.7 2.5 4 .9 4v1c1.3 0 2.6.6 3.5 1.6l.1.2zm7.5 4.7c-1.2 0-2.3-.5-3.2-1.3l-.6.8c1 1 2.4 1.5 3.8 1.5V14l3.5-2-3.5-2v1.5zm0-6V7l3.5-2L12 3v1.5c-1.6 0-3.2.7-4.2 2l-3.4 3.9c-.9 1-2.2 1.6-3.5 1.6v1c1.6 0 3.2-.7 4.2-2l3.4-3.9c.9-1 2.2-1.6 3.5-1.6z"
-      fill="currentColor"
-    ></path>
+      d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"
+      fill="white"
+    ></path>{" "}
   </svg>
 );
 

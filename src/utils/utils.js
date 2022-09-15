@@ -4,7 +4,7 @@ export const getAllSongsFavoriteIndicator = (favoriteSongs, allSongs) => {
   return allSongs.map((songPlaylist) => {
     const favorite = favoriteSongs.find(
       (SongFavorite) =>
-        SongFavorite.song.album.id === songPlaylist.track.album.id
+        SongFavorite.track.album.id === songPlaylist.track.album.id
     );
     return {
       ...songPlaylist,
@@ -25,7 +25,7 @@ export const insertDeleteSong = async (song, setMessage) => {
   const db = await createDB();
   const result = await insertSong(db, {
     id: song.id,
-    song: song,
+    track: song,
   });
   setMessage(result);
 };

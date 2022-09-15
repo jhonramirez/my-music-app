@@ -1,19 +1,18 @@
 import { icoFavorites } from "../../../svg";
 import { alertMessage, insertDeleteSong } from "../../../utils";
-import { Input } from "../../atoms/Input/Input";
-import { Label } from "../../atoms/Label/Label";
+import { Input, Label } from "../..";
 import "./SongList.scss";
 
-export const SongList = ({ track, favorite, setMessage }) => {
+export const SongList = ({ track, favorite, setMessage, onClick }) => {
   const onsubmit = (song) => {
     insertDeleteSong(song, setMessage);
     alertMessage();
   };
 
   return (
-    <div className="songList">
+    <div className="songList" onClick={() => onClick({ ...track })}>
       <div className="songList__img">
-        <img src={track.album.images[0].url} alt="album" />
+        <img src={track.album.images[0].url} alt="album" className="img" />
       </div>
       <div className="songList__infoSection">
         <p className="songList__info">

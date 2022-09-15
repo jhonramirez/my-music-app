@@ -30,19 +30,19 @@ export const createDB = async () => {
   });
 };
 
-export function insertSong(db, song) {
+export function insertSong(db, track) {
   const txn = db.transaction("Playlist", "readwrite");
 
   const store = txn.objectStore("Playlist");
 
-  let query = store.put(song);
+  let query = store.put(track);
   return new Promise((resolve) => {
     query.onsuccess = function (event) {
       return resolve("Se adiciono a favoritos");
     };
 
     query.onerror = function (event) {
-      deleteSong(db, song.id);
+      deleteSong(db, track.id);
       return resolve("Se elimino de favoritos");
     };
 

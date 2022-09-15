@@ -20,18 +20,25 @@ export const Header = () => {
 
   return (
     <div className="header">
+      <div className="header__left">
         <Navlink
           navigate="/"
           img="Mymusicapp.png"
           alt="My music App"
           className="header__imghome"
         />
-        <Navlink navigate="/favorites" name="Favoritos" className="header__favorite" />
-
+        <Navlink
+          navigate="/favorites"
+          name="Favoritos"
+          className="header__favorite"
+        />
+      </div>
+      <div className="header__right">
         <form onSubmit={onLogout}>
           <Label name={user?.display_name} className="header__name" />
-          <Button onClick={() => onLogout()} label= {icoLogout} className="header__logout" />
+          <Button label={icoLogout} className="header__logout" />
         </form>
+      </div>
     </div>
   );
 };
