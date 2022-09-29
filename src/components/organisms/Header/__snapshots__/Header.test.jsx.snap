@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Header/> Debe hacer match con el snapshot 1`] = `
+<div>
+  <section
+    class="header"
+  >
+    <article
+      class="header__left"
+    >
+      <img
+        alt="My music App"
+        class="header__imghome"
+        src="Mymusicapp.png"
+      />
+      <a
+        aria-current="page"
+        class="header__home active"
+        href="/"
+      >
+        Inicio
+      </a>
+      <a
+        class="header__favorite"
+        href="/favorites"
+      >
+        Favoritos
+      </a>
+    </article>
+    <form
+      class="header__right"
+    >
+      <label
+        class="header__name"
+        data-testid="label"
+      >
+        proof
+      </label>
+      <button
+        class="btn btn__black"
+        data-testid="button"
+      >
+        <svg
+          class="feather feather-log-out"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+          />
+          <polyline
+            points="16 17 21 12 16 7"
+          />
+          <line
+            x1="21"
+            x2="9"
+            y1="12"
+            y2="12"
+          />
+        </svg>
+      </button>
+    </form>
+  </section>
+</div>
+`;

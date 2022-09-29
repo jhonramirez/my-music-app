@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <MusicRoutes/> Debe hacer match con el snapshot 1`] = `
+<div>
+  <section>
+    <article
+      class="loginPage"
+    >
+      <img
+        alt="My music App"
+        class="loginPage__img"
+        src="Mymusicapp.png"
+      />
+      <h1>
+        My music App
+      </h1>
+      <hr />
+      <button
+        class="btn btn__black"
+        data-testid="button"
+      >
+        Login
+      </button>
+    </article>
+  </section>
+</div>
+`;

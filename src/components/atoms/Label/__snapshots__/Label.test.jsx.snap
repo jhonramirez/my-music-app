@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Label /> Render Button y match con el snapshot 1`] = `
+<div>
+  <label
+    class="className"
+    data-testid="label"
+    for="htmlFor"
+  >
+    proof
+  </label>
+</div>
+`;

@@ -3,11 +3,12 @@ import { Input } from "./Input";
 import "@testing-library/jest-dom";
 
 describe("Pruebas en <Input />", () => {
-  render(<Input id={"proof"} />);
+  const { container } = render(<Input id={"proof"} />);
   const InputElement = screen.getByTestId("heart-input");
 
-  test("Render Input", () => {
+  test("Render Input y match con el snapshot", () => {
     expect(InputElement).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
   });
 
   test("Se evalua que el Input tenga un ID", () => {

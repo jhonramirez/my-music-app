@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Button /> Render Button y match con el snapshot 1`] = `
+<div>
+  <button
+    class="btn btn__black"
+    data-testid="button"
+  >
+    proof
+  </button>
+</div>
+`;

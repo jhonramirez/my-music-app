@@ -1,26 +1,30 @@
-import { render, screen } from "@testing-library/react";
-import { LoginPage } from "../components";
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
 import "@testing-library/jest-dom";
-import { MusicRoutes } from "./MusicRoutes";
+import { render } from "@testing-library/react";
+import { authSlice, playlistSlice } from "../store";
+import { AppRouter } from "./AppRouter";
 import { MemoryRouter } from "react-router-dom";
 
-describe("Pruebas en <AppRouter />", () => {
-//   test("Debe mostrar el LoginPage", () => {
-//     render(
-//       <MemoryRouter>
-//         <LoginPage />
-//       </MemoryRouter>
-//     );
-//     expect(screen.getByText("My music App")).toBeTruthy();
-//   });
+jest.mock("../services/createDB");
 
-  test("Debe mostrar MusicRoutes", () => {
-    render(
-      <MemoryRouter >
-        <MusicRoutes />
+const store = configureStore({
+  reducer: {
+    auth: authSlice.reducer,
+    playlist: playlistSlice.reducer,
+  },
+});
+
+describe("Pruebas en <MusicRoutes/>", () => {
+  const { container } = render(
+    <Provider store={store}>
+      <MemoryRouter>
+        <AppRouter />
       </MemoryRouter>
-    );
-    screen.debug();
-    // expect(screen.getByText("My music App")).toBeTruthy();
+    </Provider>
+  );
+
+  test("Debe hacer match con el snapshot", () => {
+    expect(container).toMatchSnapshot();
   });
 });
